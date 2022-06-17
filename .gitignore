@@ -11,6 +11,11 @@
 */[Ll]ogs/
 */[Mm]emoryCaptures/
 
+
+[Bb]uild
+[Bb]uilds
+
+
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
@@ -58,4 +63,3 @@
 
 # Crashlytics generated file
 */crashlytics-build.properties
-
