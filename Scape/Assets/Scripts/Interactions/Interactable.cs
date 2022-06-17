@@ -27,6 +27,7 @@ public class Interactable : InteractableBase
     public override void Interact()
     {
         Debug.Log("INTERACTION");
+        onInteract?.Invoke();
         Perform();
     }
 

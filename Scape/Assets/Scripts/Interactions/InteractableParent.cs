@@ -45,8 +45,11 @@ public class InteractableParent : Interactable
             return;
 
         SetIsBusy(true);
+
         Debug.Log("INTERACTED", gameObject);
         animator.SetTrigger("Activate");
+
+        onInteract?.Invoke();
     }
 
     public override void SetEnabled(bool value)
