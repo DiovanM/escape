@@ -44,11 +44,11 @@ public class CharacterMovement : MonoBehaviour
         moveVelocity.x = desiredVelocity.x;
         moveVelocity.z = desiredVelocity.z;
 
-        if(characterController.isGrounded)
+        if (characterController.isGrounded)
         {
-            moveVelocity.y = 0f;
+            moveVelocity.y = Physics.gravity.y * Time.deltaTime;
 
-            if(jump)
+            if (jump)
             {
                 jump = false;
                 moveVelocity.y = jumpForce;
@@ -60,9 +60,13 @@ public class CharacterMovement : MonoBehaviour
         }
 
         characterController.Move(moveVelocity * Time.deltaTime);
-        
-        if(crouching)
-            Debug.DrawRay(transform.position, Vector3.up * (playerHeight * (transform.localScale.y + .2f)), Color.green);
+
+        if (crouching)
+        {
+            var position = transform.position;
+            position.y += crouchHeight;
+            Debug.DrawRay(position, Vector3.up * ((playerHeight +.1f) * transform.localScale.y), Color.green);
+        }
     }
 
     private void ToggleCrouch()
@@ -109,7 +113,13 @@ public class CharacterMovement : MonoBehaviour
 
     private void OnCrouchPerformed(CallbackContext context)
     {
-        var canCrouch = !runningCrouch && !(crouching && Physics.Raycast(transform.position, Vector3.up, playerHeight * transform.localScale.y + .2f, ~LayerMask.GetMask("Player")));
+        var position = transform.position;
+        position.y += crouchHeight + .1f;
+        var ray = new Ray(position, Vector3.up);
+        var raycast = Physics.Raycast(ray, playerHeight * transform.localScale.y, ~LayerMask.GetMask("Player"));
+
+        var canCrouch = !runningCrouch && !(crouching && raycast) && characterController.isGrounded;
+        Debug.Log(canCrouch);
         if(canCrouch)
         {
             ToggleCrouch();
