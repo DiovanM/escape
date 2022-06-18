@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
+using CallbackContext = UnityEngine.InputSystem.InputAction.CallbackContext;
 using Input;
 
 public class CharacterInteractor : MonoBehaviour
@@ -45,7 +45,7 @@ public class CharacterInteractor : MonoBehaviour
         Debug.DrawRay(raycastReference.position, raycastReference.forward * maxDistance, rayColor);
     }
 
-    private void Interact(InputAction.CallbackContext context)
+    private void Interact(CallbackContext context)
     {
         if(selectedInteractable != null && selectedInteractable.isAvailable)
             selectedInteractable?.Interact();

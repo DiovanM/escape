@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using CallbackContext = UnityEngine.InputSystem.InputAction.CallbackContext;
 using Input;
+using DG.Tweening;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -60,10 +61,11 @@ public class CharacterMovement : MonoBehaviour
 
         characterController.Move(moveVelocity * Time.deltaTime);
         
-        Debug.DrawRay(transform.position, Vector3.up * (playerHeight * (transform.localScale.y + .2f)), Color.green);
+        if(crouching)
+            Debug.DrawRay(transform.position, Vector3.up * (playerHeight * (transform.localScale.y + .2f)), Color.green);
     }
 
-    private IEnumerator ToggleCrouch()
+    private void ToggleCrouch()
     {
         runningCrouch = true;
 
@@ -72,36 +74,45 @@ public class CharacterMovement : MonoBehaviour
         var currentCenter = characterController.center;
         var targetCenter = crouching ? standingCenter : crouchingCenter;
 
-        var elapsedTime = 0f;
+        var runningHeight = true;
+        var runningcenter = true;
 
-        while(elapsedTime < crouchingTime)
+        DOTween.To(() => characterController.height, x => characterController.height = x, targetHeight, crouchingTime).onComplete += () =>
         {
-            characterController.height = Mathf.Lerp(currentHeight, targetHeight, elapsedTime / crouchingTime);
-            characterController.center = Vector3.Lerp(currentCenter, targetCenter, elapsedTime / crouchingTime);
+            runningHeight = false;
+            
+            if(!runningHeight && !runningcenter && runningCrouch)
+            {
+                crouching = !crouching;
+                runningCrouch = false;
+            }
+        };
 
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
+        DOTween.To(() => characterController.center, y => characterController.center = y, targetCenter, crouchingTime).onComplete += () =>
+        {
+            runningcenter = false;
 
-        characterController.height = targetHeight;
-        characterController.center = targetCenter;
+            if (!runningHeight && !runningcenter && runningCrouch)
+            {
 
-        crouching = !crouching;
+                crouching = !crouching;
+                runningCrouch = false;
+            }
+        };
 
-        runningCrouch = false;
     }
 
-    private void OnJumpPerformed(InputAction.CallbackContext context)
+    private void OnJumpPerformed(CallbackContext context)
     {
         jump = true;
     }
 
-    private void OnCrouchPerformed(InputAction.CallbackContext context)
+    private void OnCrouchPerformed(CallbackContext context)
     {
         var canCrouch = !runningCrouch && !(crouching && Physics.Raycast(transform.position, Vector3.up, playerHeight * transform.localScale.y + .2f, ~LayerMask.GetMask("Player")));
         if(canCrouch)
         {
-            StartCoroutine(ToggleCrouch());
+            ToggleCrouch();
         }
     }
 
