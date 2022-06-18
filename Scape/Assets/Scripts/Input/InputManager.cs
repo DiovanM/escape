@@ -9,20 +9,20 @@ namespace Input
 
         public static Player player;
 
-        private static InputManager _instance;
+        private static InputManager instance;
 
         private void Awake()
         {
-            if (_instance != null)
+            if (instance != null)
             {
                 Destroy(this);
                 return;
             }
             else
             {
+                instance = this;
                 DontDestroyOnLoad(this);
             }
-
 
             player = new Player();
             player.Enable();
