@@ -46,7 +46,7 @@ public class CharacterMovement : MonoBehaviour
 
         if (characterController.isGrounded)
         {
-            moveVelocity.y = Physics.gravity.y * Time.deltaTime;
+            moveVelocity.y = Physics.gravity.y * gravityScale * Time.deltaTime;
 
             if (jump)
             {
@@ -119,7 +119,7 @@ public class CharacterMovement : MonoBehaviour
         var raycast = Physics.Raycast(ray, playerHeight * transform.localScale.y, ~LayerMask.GetMask("Player"));
 
         var canCrouch = !runningCrouch && !(crouching && raycast) && characterController.isGrounded;
-        Debug.Log(canCrouch);
+
         if(canCrouch)
         {
             ToggleCrouch();

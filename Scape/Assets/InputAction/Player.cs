@@ -114,7 +114,7 @@ namespace InputActions
                     ""id"": ""60900b84-e79d-4fbe-9e16-8aa5859a7d45"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""ScaleVector2(x=1.5,y=1.5)"",
                     ""groups"": """",
                     ""action"": ""Look"",
                     ""isComposite"": false,
