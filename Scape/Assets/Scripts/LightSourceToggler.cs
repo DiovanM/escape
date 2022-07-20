@@ -51,7 +51,11 @@ public class LightSourceToggler : MonoBehaviour
             light.enabled = isEnabled;
 
         if(lightmaps.Count > 0)
-            lightmaps.ForEach((lm) => lm.Toggle(isEnabled));
+            lightmaps.ForEach((lm) =>
+            {
+                if (lm != null)
+                    lm.Toggle(isEnabled);
+            });
 
     }    
 

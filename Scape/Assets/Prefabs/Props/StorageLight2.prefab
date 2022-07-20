@@ -156,7 +156,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6757628874111128272}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f155dbf3a7bc56c49a06a7634dfc4fb3, type: 3}
   m_Name: 
@@ -164,21 +164,7 @@ MonoBehaviour:
   startOn: 0
   emitterRenderer: {fileID: 1649021173656399813}
   light: {fileID: 6757628873995797568}
-  lightmaps:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 969367349}
+  lightmaps: []
 --- !u!1001 &1634823802199231217
 PrefabInstance:
   m_ObjectHideFlags: 0
