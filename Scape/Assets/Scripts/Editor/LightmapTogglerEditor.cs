@@ -18,13 +18,11 @@ public class LightmapTogglerEditor : Editor
         {
             if(GUILayout.Button("Turn On"))
             {
-                Undo.RecordObject(lt, "Turn On lightmap");
                 lt.Toggle(true);
             }
 
             if (GUILayout.Button("Turn Off"))
             {
-                Undo.RecordObject(lt, "Turn Off lightmap");
                 lt.Toggle(false);
             }
         }

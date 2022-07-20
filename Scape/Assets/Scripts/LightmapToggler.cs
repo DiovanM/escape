@@ -5,17 +5,25 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class LightmapToggler : MonoBehaviour
 {
-    private new Renderer renderer;
-    private int originalIndex = -1;
+    private const int noLightmapIndex = -1;
+    private const int originalIndex = 0;
 
-    private void OnEnable()
+    private new Renderer renderer;
+    private int currentIndex;
+
+    private void OnValidate()
+    {
+        Awake();
+    }
+
+    private void Awake()
     {
         renderer = GetComponent<Renderer>();
+
         if (renderer != null)
         {
-            originalIndex = renderer.lightmapIndex;
+            renderer.lightmapIndex = currentIndex;
         }
-
     }
 
     public void Toggle(bool value)
@@ -23,16 +31,8 @@ public class LightmapToggler : MonoBehaviour
         if (renderer == null) 
             return;
 
-        if (renderer != null)
-        {
-            if (value)
-            {
-                renderer.lightmapIndex = originalIndex;
-            }
-            else
-            {
-                renderer.lightmapIndex = -1;
-            }
-        }
+        currentIndex = value ? originalIndex : noLightmapIndex;
+
+        renderer.lightmapIndex = currentIndex;
     }
 }

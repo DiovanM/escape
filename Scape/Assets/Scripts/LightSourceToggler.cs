@@ -16,8 +16,6 @@ public class LightSourceToggler : MonoBehaviour
 
     private const string emission_keyword = "_EMISSION";
 
-    private MaterialPropertyBlock mpb;
-
     private void OnValidate()
     {
         Awake();
@@ -25,8 +23,6 @@ public class LightSourceToggler : MonoBehaviour
 
     private void Awake()
     {
-        if (mpb == null)
-            mpb = new MaterialPropertyBlock();
         Toggle(startOn);
     }
 
@@ -43,22 +39,19 @@ public class LightSourceToggler : MonoBehaviour
         {
             if (isEnabled)
             {
-                //mpb.SetColor("_EmissionColor", new Color(191,191,191));
                 emitterRenderer.sharedMaterial.EnableKeyword(emission_keyword);
             }
             else
             {
-                //mpb.SetColor("_EmissionColor", new Color(0,0,0));
                 emitterRenderer.sharedMaterial.DisableKeyword(emission_keyword);
             }
-
-            //emitterRenderer.SetPropertyBlock(mpb);
         }
 
         if(light != null)
             light.enabled = isEnabled;
 
-        lightmaps.ForEach((lm) => lm.Toggle(isEnabled));
+        if(lightmaps.Count > 0)
+            lightmaps.ForEach((lm) => lm.Toggle(isEnabled));
 
     }    
 
