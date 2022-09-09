@@ -1,9 +1,11 @@
 using UnityEngine;
 using CallbackContext = UnityEngine.InputSystem.InputAction.CallbackContext;
 using Input;
+using UnityEngine.Events;
 
 public class CharacterInteractor : MonoBehaviour
 {
+    public UnityEvent<InteractableBase> onInteract = new (); 
 
     [SerializeField] private Transform raycastReference;
     [SerializeField] private LayerMask layer;
@@ -47,8 +49,12 @@ public class CharacterInteractor : MonoBehaviour
 
     private void Interact(CallbackContext context)
     {
-        if(selectedInteractable != null && selectedInteractable.isAvailable)
+        if (selectedInteractable != null && selectedInteractable.isAvailable)
+        {
+            onInteract?.Invoke(selectedInteractable);
             selectedInteractable?.Interact();
+
+        }
     }
 
 }

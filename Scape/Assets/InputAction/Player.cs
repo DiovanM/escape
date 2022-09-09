@@ -73,6 +73,24 @@ namespace InputActions
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""NextItem"",
+                    ""type"": ""Value"",
+                    ""id"": ""fe00f060-3eb6-4a6a-a0c4-137d16a57563"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PrevItem"",
+                    ""type"": ""Value"",
+                    ""id"": ""89f999f0-36f6-4ac2-8f11-3400c5c2a85e"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -273,6 +291,50 @@ namespace InputActions
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f2ff1468-773c-47af-90bd-85febfd627e8"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NextItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""720feaca-bd48-4a65-b16a-4268bd83f57b"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NextItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9d94e9b6-5773-48f2-92be-337ab46c36ee"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PrevItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""56b8e5ef-6a13-481a-897d-5e9c3d9e150e"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PrevItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -286,6 +348,8 @@ namespace InputActions
             m_Controls_Crouch = m_Controls.FindAction("Crouch", throwIfNotFound: true);
             m_Controls_Look = m_Controls.FindAction("Look", throwIfNotFound: true);
             m_Controls_Interaction = m_Controls.FindAction("Interaction", throwIfNotFound: true);
+            m_Controls_NextItem = m_Controls.FindAction("NextItem", throwIfNotFound: true);
+            m_Controls_PrevItem = m_Controls.FindAction("PrevItem", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -350,6 +414,8 @@ namespace InputActions
         private readonly InputAction m_Controls_Crouch;
         private readonly InputAction m_Controls_Look;
         private readonly InputAction m_Controls_Interaction;
+        private readonly InputAction m_Controls_NextItem;
+        private readonly InputAction m_Controls_PrevItem;
         public struct ControlsActions
         {
             private @Player m_Wrapper;
@@ -359,6 +425,8 @@ namespace InputActions
             public InputAction @Crouch => m_Wrapper.m_Controls_Crouch;
             public InputAction @Look => m_Wrapper.m_Controls_Look;
             public InputAction @Interaction => m_Wrapper.m_Controls_Interaction;
+            public InputAction @NextItem => m_Wrapper.m_Controls_NextItem;
+            public InputAction @PrevItem => m_Wrapper.m_Controls_PrevItem;
             public InputActionMap Get() { return m_Wrapper.m_Controls; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -383,6 +451,12 @@ namespace InputActions
                     @Interaction.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnInteraction;
                     @Interaction.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnInteraction;
                     @Interaction.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnInteraction;
+                    @NextItem.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnNextItem;
+                    @NextItem.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnNextItem;
+                    @NextItem.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnNextItem;
+                    @PrevItem.started -= m_Wrapper.m_ControlsActionsCallbackInterface.OnPrevItem;
+                    @PrevItem.performed -= m_Wrapper.m_ControlsActionsCallbackInterface.OnPrevItem;
+                    @PrevItem.canceled -= m_Wrapper.m_ControlsActionsCallbackInterface.OnPrevItem;
                 }
                 m_Wrapper.m_ControlsActionsCallbackInterface = instance;
                 if (instance != null)
@@ -402,6 +476,12 @@ namespace InputActions
                     @Interaction.started += instance.OnInteraction;
                     @Interaction.performed += instance.OnInteraction;
                     @Interaction.canceled += instance.OnInteraction;
+                    @NextItem.started += instance.OnNextItem;
+                    @NextItem.performed += instance.OnNextItem;
+                    @NextItem.canceled += instance.OnNextItem;
+                    @PrevItem.started += instance.OnPrevItem;
+                    @PrevItem.performed += instance.OnPrevItem;
+                    @PrevItem.canceled += instance.OnPrevItem;
                 }
             }
         }
@@ -413,6 +493,8 @@ namespace InputActions
             void OnCrouch(InputAction.CallbackContext context);
             void OnLook(InputAction.CallbackContext context);
             void OnInteraction(InputAction.CallbackContext context);
+            void OnNextItem(InputAction.CallbackContext context);
+            void OnPrevItem(InputAction.CallbackContext context);
         }
     }
 }
