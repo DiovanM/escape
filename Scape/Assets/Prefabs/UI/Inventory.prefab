@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5902645182899072871}
   - component: {fileID: 7131194325214663531}
   - component: {fileID: 3134125548586903906}
-  - component: {fileID: 6549395746229636780}
+  - component: {fileID: 6455133576629296999}
   m_Layer: 5
   m_Name: ItemsBar
   m_TagString: Untagged
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &6549395746229636780
+--- !u!114 &6455133576629296999
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,11 +114,89 @@ MonoBehaviour:
   m_GameObject: {fileID: 2553351029112351046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Script: {fileID: 11500000, guid: 22d6436a87432de4d9a8278f12bf49b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 2
+  source: {fileID: 6838914253355633722}
+  settingsFallback:
+    HorizontalFit: 2
+    VerticalFit: 2
+    IsAnimated: 0
+    AnimationTime: 0.2
+    HasMinWidth: 0
+    HasMinHeight: 0
+    HasMaxWidth: 0
+    HasMaxHeight: 0
+    screenConfigName: 
+  customSettings:
+    items: []
+  minWidthSizerFallback:
+    screenConfigName: 
+    OptimizedSize: 0
+    MinSize: 0
+    MaxSize: 4000
+    Mod:
+      ExponentialScale: 1
+      SizeModifiers:
+      - Mode: 0
+        Impact: 1
+  minWidthSizers:
+    items: []
+  minHeightSizerFallback:
+    screenConfigName: 
+    OptimizedSize: 0
+    MinSize: 0
+    MaxSize: 4000
+    Mod:
+      ExponentialScale: 1
+      SizeModifiers:
+      - Mode: 0
+        Impact: 1
+  minHeightSizers:
+    items: []
+  maxWidthSizerFallback:
+    screenConfigName: 
+    OptimizedSize: 1000
+    MinSize: 0
+    MaxSize: 4000
+    Mod:
+      ExponentialScale: 1
+      SizeModifiers:
+      - Mode: 0
+        Impact: 1
+  maxWidthSizers:
+    items: []
+  maxHeightSizerFallback:
+    screenConfigName: 
+    OptimizedSize: 1000
+    MinSize: 0
+    MaxSize: 4000
+    Mod:
+      ExponentialScale: 1
+      SizeModifiers:
+      - Mode: 0
+        Impact: 1
+  maxHeightSizers:
+    items: []
+  paddingFallback:
+    screenConfigName: 
+    OptimizedSize: {x: 0, y: 0}
+    MinSize: {x: -5000, y: -5000}
+    MaxSize: {x: 5000, y: 5000}
+    ModX:
+      ExponentialScale: 1
+      SizeModifiers:
+      - Mode: 0
+        Impact: 1
+    ModY:
+      ExponentialScale: 1
+      SizeModifiers:
+      - Mode: 0
+        Impact: 1
+  paddingSizers:
+    items: []
 --- !u!1 &4620523858607099659
 GameObject:
   m_ObjectHideFlags: 0
