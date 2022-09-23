@@ -12,6 +12,7 @@ public class Interactable : InteractableBase
 
     protected void Awake()
     {
+        outline ??= GetComponent<Outline>();
         outline.enabled = false;
     }
 

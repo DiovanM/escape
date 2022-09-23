@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class InteractableParent : Interactable
 {
-
-    [SerializeField] private Animator animator;
-
     private List<InteractablePart> interactableParts = new List<InteractablePart>();
 
     protected new void Awake()
     {
         base.Awake();
-
-        if (animator == null)
-            animator = GetComponent<Animator>();
 
         interactableParts = GetComponentsInChildren<InteractablePart>().ToList();
 
@@ -47,7 +41,6 @@ public class InteractableParent : Interactable
         SetIsBusy(true);
 
         Debug.Log("INTERACTED", gameObject);
-        animator.SetTrigger("Activate");
 
         onInteract?.Invoke();
     }

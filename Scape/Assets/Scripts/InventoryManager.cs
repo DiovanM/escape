@@ -14,7 +14,7 @@ public class InventoryManager : MonoBehaviour
     public static List<CollectableItem> playerItems = new();
 
     private static int _selectedItemId;
-    private static CollectableItem _selectedItem => playerItems[_selectedItemId];
+    private static CollectableItem _selectedItem;
 
     private void Start()
     {
@@ -26,12 +26,25 @@ public class InventoryManager : MonoBehaviour
     {
         playerItems.Add(item);
         onAddItem.Trigger(item);
+        if(_selectedItem == null)
+        {
+            SelectItem(0);
+        }
     }
 
     public static void RemoveItem(CollectableItem item)
     {
         playerItems.Remove(item);
         onRemoveItem.Trigger(item);
+        if (playerItems.Count > 0)
+        {
+            SelectItem(_selectedItemId);
+        }
+        else
+        {
+            _selectedItemId = 0;
+            _selectedItem = null;
+        }
     }
 
     public static void SelectItem(int index)
@@ -63,11 +76,19 @@ public class InventoryManager : MonoBehaviour
 
     public static void SelectItem(CollectableItem item)
     {
-        if (!playerItems.Contains(item))
+        if(item == null)
+        {
+            _selectedItem = null;
+            _selectedItemId = 0;
+            onSelectItem.Trigger(null);
+        }
+        else if (!playerItems.Contains(item))
             Debug.LogError("Player não possui o item que está tentando selecionar");
         else if(item != _selectedItem)
         {
+            Debug.Log("Selected Item:" + item.gameObject.name);
             _selectedItemId = playerItems.IndexOf(item);
+            _selectedItem = item;
             onSelectItem.Trigger(playerItems[_selectedItemId]);
         }
     }

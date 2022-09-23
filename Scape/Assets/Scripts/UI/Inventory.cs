@@ -43,7 +43,7 @@ namespace UI
             //Get Item Data
             //itemView.icon = data.icon;
             itemView.indicator.text = itemIndex.ToString();
-            if(itemIndex == 1)
+            if (itemIndex == 1)
             {
                 _selectedItem = itemView;
                 itemView.SetSelected(true);
@@ -69,8 +69,11 @@ namespace UI
         private void SelectItem(CollectableItem item)
         {
             _selectedItem.SetSelected(false);
-            _selectedItem = _collectedItems[item];
-            _selectedItem.SetSelected(true);
+            if (item != null)
+            {
+                _selectedItem = _collectedItems[item];
+                _selectedItem.SetSelected(true);
+            }
         }
 
     }
