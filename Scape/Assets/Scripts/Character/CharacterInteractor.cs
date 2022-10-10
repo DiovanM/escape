@@ -15,7 +15,7 @@ public class CharacterInteractor : MonoBehaviour
 
     private void Start()
     {
-        InputManager.player.Controls.Interaction.performed += Interact;
+        InputManager.character.Controls.Interaction.performed += Interact;
     }
 
     private void FixedUpdate()

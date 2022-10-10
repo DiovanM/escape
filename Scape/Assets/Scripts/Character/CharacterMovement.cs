@@ -29,13 +29,13 @@ public class CharacterMovement : MonoBehaviour
 
     private void Start()
     {
-        InputManager.player.Controls.Jump.performed += OnJumpPerformed;
-        InputManager.player.Controls.Crouch.performed += OnCrouchPerformed;
+        InputManager.character.Controls.Jump.performed += OnJumpPerformed;
+        InputManager.character.Controls.Crouch.performed += OnCrouchPerformed;
     }
 
     private void Update()
     {
-        var movementInput = InputManager.player.Controls.Move.ReadValue<Vector2>();
+        var movementInput = InputManager.character.Controls.Move.ReadValue<Vector2>();
 
         var speed = crouching ? crouchSpeed : walkingSpeed;
 

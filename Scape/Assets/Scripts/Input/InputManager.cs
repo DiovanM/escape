@@ -7,7 +7,8 @@ namespace Input
     public class InputManager : MonoBehaviour
     {
 
-        public static Player player;
+        public static Character character;
+        public static Inventory inventory;
 
         private static InputManager instance;
 
@@ -24,8 +25,11 @@ namespace Input
                 DontDestroyOnLoad(this);
             }
 
-            player = new Player();
-            player.Enable();
+            character = new Character();
+            character.Enable();
+
+            inventory = new Inventory();
+            inventory.Enable();
         }
 
     }

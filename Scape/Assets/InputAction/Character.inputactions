@@ -1,5 +1,5 @@
 {
-    "name": "Player",
+    "name": "Character",
     "maps": [
         {
             "name": "Controls",
@@ -49,24 +49,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "NextItem",
-                    "type": "Value",
-                    "id": "fe00f060-3eb6-4a6a-a0c4-137d16a57563",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "PrevItem",
-                    "type": "Value",
-                    "id": "89f999f0-36f6-4ac2-8f11-3400c5c2a85e",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -267,50 +249,6 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "f2ff1468-773c-47af-90bd-85febfd627e8",
-                    "path": "<Mouse>/scroll",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "NextItem",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "720feaca-bd48-4a65-b16a-4268bd83f57b",
-                    "path": "<Gamepad>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "NextItem",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9d94e9b6-5773-48f2-92be-337ab46c36ee",
-                    "path": "<Mouse>/scroll",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "PrevItem",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "56b8e5ef-6a13-481a-897d-5e9c3d9e150e",
-                    "path": "<Gamepad>/leftShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "PrevItem",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }

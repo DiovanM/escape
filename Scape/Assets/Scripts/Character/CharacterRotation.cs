@@ -17,7 +17,7 @@ public class CharacterRotation : MonoBehaviour
 
     private void Update()
     {
-        var input = InputManager.player.Controls.Look.ReadValue<Vector2>() * sensibility;
+        var input = InputManager.character.Controls.Look.ReadValue<Vector2>() * sensibility;
 
         eulerAngles.x = Mathf.SmoothDampAngle(eulerAngles.x, eulerAngles.x - input.y, ref currentVerticalVelocity, Time.deltaTime);
         eulerAngles.x = Mathf.Clamp(eulerAngles.x, yMin, yMax);
