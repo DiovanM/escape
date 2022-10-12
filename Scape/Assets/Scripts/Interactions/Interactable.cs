@@ -7,9 +7,6 @@ public class Interactable : InteractableBase
 
     [SerializeField] private Outline outline;
 
-    public UnityEvent onInteract;
-    public UnityEvent onPerform;
-
     protected void Awake()
     {
         outline ??= GetComponent<Outline>();

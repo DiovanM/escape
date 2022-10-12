@@ -16,8 +16,8 @@ public class InteractableParent : Interactable
         {
             part.onSelect += Select;
             part.onDeselect += Deselect;
-            part.onInteract += Interact;
-            part.onPerform += Perform;
+            part.onInteract.AddListener(Interact);
+            part.onPerform.AddListener(Perform);
         });
 
     }

@@ -5,8 +5,6 @@ public class InteractablePart : InteractableBase
 
     public Action onSelect;
     public Action onDeselect;
-    public Action onInteract;
-    public Action onPerform;
 
     public override void Select()
     {

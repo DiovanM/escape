@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class InteractableBase : MonoBehaviour
 {
@@ -6,6 +7,9 @@ public abstract class InteractableBase : MonoBehaviour
     public bool isEnabled = true;
     public bool isBusy;
     public bool isAvailable => isEnabled && !isBusy;
+
+    public UnityEvent onInteract;
+    public UnityEvent onPerform;
 
     public abstract void Select();
     public abstract void Deselect();
