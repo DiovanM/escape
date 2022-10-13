@@ -40,8 +40,6 @@ public class InteractableParent : Interactable
 
         SetIsBusy(true);
 
-        Debug.Log("INTERACTED", gameObject);
-
         onInteract?.Invoke();
     }
 

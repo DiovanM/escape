@@ -17,4 +17,9 @@ public class CollectableItem : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void Use()
+    {
+        Debug.Log("Item Used " + itemKey);
+    }
+
 }

@@ -4,7 +4,6 @@ using Events;
 using UnityEngine;
 using Input;
 using static UnityEngine.InputSystem.InputAction;
-using UnityEngine.InputSystem.Controls;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -48,7 +47,7 @@ public class InventoryManager : MonoBehaviour
         onRemoveItem.Trigger(item);
         if (playerItems.Count > 0)
         {
-            SelectItem(_selectedItemId);
+            SelectItem(_selectedItemId, true);
         }
         else
         {
@@ -95,7 +94,6 @@ public class InventoryManager : MonoBehaviour
             Debug.LogError("Player não possui o item que está tentando selecionar");
         else if(item != _selectedItem)
         {
-            Debug.Log("Selected Item:" + item.gameObject.name);
             _selectedItemId = playerItems.IndexOf(item);
             _selectedItem = item;
             onSelectItem.Trigger(playerItems[_selectedItemId]);

@@ -6,7 +6,7 @@ using Input;
 public class CharacterRotation : MonoBehaviour
 {
 
-    [SerializeField] private Transform camera;
+    [SerializeField] private new Transform camera;
     [SerializeField] private float sensibility;
     [SerializeField] private float yMin = -90;
     [SerializeField] private float yMax = 90;

@@ -58,6 +58,7 @@ public class CharacterInteractor : MonoBehaviour
 
     private void OnInteractedPerform()
     {
+        selectedInteractable.onPerform.RemoveListener(OnInteractedPerform);
         onInteract?.Invoke(selectedInteractable);
     }
 

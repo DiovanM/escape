@@ -11,7 +11,6 @@ public class CharacterCollector : MonoBehaviour
         {
             collectable.Collect();
             InventoryManager.AddItem(collectable);
-
         }
     }
 
