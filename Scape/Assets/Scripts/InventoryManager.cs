@@ -5,7 +5,7 @@ using UnityEngine;
 using Input;
 using static UnityEngine.InputSystem.InputAction;
 
-public class InventoryManager : MonoBehaviour
+public class InventoryManager : Singleton<InventoryManager>
 {
     public static Event<CollectableItem> onAddItem = new();
     public static Event<CollectableItem> onRemoveItem = new();

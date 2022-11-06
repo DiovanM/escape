@@ -4,26 +4,17 @@ using InputActions;
 namespace Input
 {
 
-    public class InputManager : MonoBehaviour
+    public class InputManager : Singleton<InputManager>
     {
 
         public static Character character;
         public static Inventory inventory;
 
-        private static InputManager instance;
-
-        private void Awake()
+        private new void Awake()
         {
-            if (instance != null)
-            {
-                Destroy(this);
-                return;
-            }
-            else
-            {
-                instance = this;
-                DontDestroyOnLoad(this);
-            }
+            base.Awake();
+
+            DontDestroyOnLoad(this);
 
             character = new Character();
             character.Enable();
