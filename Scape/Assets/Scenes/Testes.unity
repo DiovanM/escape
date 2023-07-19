@@ -172,26 +172,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13cb6f5a6df126b4491bb7b95170f343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnabled: 1
-  isBusy: 0
   onInteract:
     m_PersistentCalls:
       m_Calls: []
-  onPerform:
+  onSelect:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 64706096}
-        m_TargetAssemblyTypeName: CollectableItem, Assembly-CSharp
-        m_MethodName: Collect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  onDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  isEnabled: 1
   outline: {fileID: 0}
 --- !u!114 &64706098
 MonoBehaviour:
@@ -394,14 +384,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnabled: 1
-  isBusy: 0
   onInteract:
     m_PersistentCalls:
       m_Calls: []
-  onPerform:
+  onSelect:
     m_PersistentCalls:
       m_Calls: []
+  onDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  isEnabled: 1
   outline: {fileID: 94053566}
 --- !u!135 &94053568
 SphereCollider:
@@ -559,14 +551,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnabled: 1
-  isBusy: 0
   onInteract:
     m_PersistentCalls:
       m_Calls: []
-  onPerform:
+  onSelect:
     m_PersistentCalls:
       m_Calls: []
+  onDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  isEnabled: 1
   outline: {fileID: 138399664}
 --- !u!65 &138399666
 BoxCollider:
@@ -718,6 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
@@ -745,6 +740,7 @@ MonoBehaviour:
     type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1 &227748966
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +753,7 @@ GameObject:
   - component: {fileID: 227748970}
   - component: {fileID: 227748969}
   - component: {fileID: 227748972}
-  - component: {fileID: 227748971}
+  - component: {fileID: 227748973}
   m_Layer: 6
   m_Name: Base
   m_TagString: Untagged
@@ -830,26 +826,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227748966}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &227748971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 227748966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e422ef9bc5d45e45b8f96d63e53462a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEnabled: 1
-  isBusy: 0
-  onInteract:
-    m_PersistentCalls:
-      m_Calls: []
-  onPerform:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &227748972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -863,6 +839,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0000002, y: 1.0000014, z: 1.0000005}
   m_Center: {x: -0.00000047683716, y: 0.0000038146973, z: -0.00000071525574}
+--- !u!114 &227748973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227748966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  isEnabled: 1
+  outline: {fileID: 0}
 --- !u!1 &230474041
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,7 +874,7 @@ GameObject:
   - component: {fileID: 230474045}
   - component: {fileID: 230474044}
   - component: {fileID: 230474047}
-  - component: {fileID: 230474046}
+  - component: {fileID: 230474048}
   m_Layer: 6
   m_Name: Handle
   m_TagString: Untagged
@@ -948,26 +947,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 230474041}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &230474046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 230474041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e422ef9bc5d45e45b8f96d63e53462a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEnabled: 1
-  isBusy: 0
-  onInteract:
-    m_PersistentCalls:
-      m_Calls: []
-  onPerform:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &230474047
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -981,6 +960,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0000005, y: 1, z: 1.0000008}
   m_Center: {x: 0.0000076293945, y: 0.00000047683716, z: -0.0000009536743}
+--- !u!114 &230474048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230474041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  isEnabled: 1
+  outline: {fileID: 0}
 --- !u!1001 &283691879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -994,7 +996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4993545983558580, guid: 8fd7435c362243e4290169501e21e517, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4993545983558580, guid: 8fd7435c362243e4290169501e21e517, type: 3}
       propertyPath: m_LocalScale.x
@@ -1172,75 +1174,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 442055718}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &553455424
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1002716395763088035, guid: c748ed245881c8f42b360e84e5daae73,
-        type: 3}
-      propertyPath: m_Name
-      value: Managers
-      objectReference: {fileID: 0}
-    - target: {fileID: 1002716395763088045, guid: c748ed245881c8f42b360e84e5daae73,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1002716395763088045, guid: c748ed245881c8f42b360e84e5daae73,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 448.87646
-      objectReference: {fileID: 0}
-    - target: {fileID: 1002716395763088045, guid: c748ed245881c8f42b360e84e5daae73,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 26.153517
-      objectReference: {fileID: 0}
-    - target: {fileID: 1002716395763088045, guid: c748ed245881c8f42b360e84e5daae73,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.5116768
-      objectReference: {fileID: 0}
-    - target: {fileID: 1002716395763088045, guid: c748ed245881c8f42b360e84e5daae73,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1002716395763088045, guid: c748ed245881c8f42b360e84e5daae73,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1002716395763088045, guid: c748ed245881c8f42b360e84e5daae73,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1002716395763088045, guid: c748ed245881c8f42b360e84e5daae73,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1002716395763088045, guid: c748ed245881c8f42b360e84e5daae73,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1002716395763088045, guid: c748ed245881c8f42b360e84e5daae73,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1002716395763088045, guid: c748ed245881c8f42b360e84e5daae73,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c748ed245881c8f42b360e84e5daae73, type: 3}
 --- !u!1 &594370461
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,8 +1184,8 @@ GameObject:
   m_Component:
   - component: {fileID: 594370462}
   - component: {fileID: 594370463}
-  - component: {fileID: 594370465}
   - component: {fileID: 594370464}
+  - component: {fileID: 594370465}
   m_Layer: 6
   m_Name: Lever
   m_TagString: Untagged
@@ -1350,20 +1283,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 594370461}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13cb6f5a6df126b4491bb7b95170f343, type: 3}
+  m_Script: {fileID: 11500000, guid: 5902870b1e4c34c4093b390793f9a35e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnabled: 1
-  isBusy: 0
   onInteract:
     m_PersistentCalls:
-      m_Calls: []
-  onPerform:
-    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 594370465}
-        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
-        m_MethodName: SetEnabled
+      - m_Target: {fileID: 704520398}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1373,7 +1301,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  outline: {fileID: 594370464}
+  onSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  isEnabled: 1
+  outline: {fileID: 0}
+  animator: {fileID: 594370463}
 --- !u!1 &598001004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,7 +1322,7 @@ GameObject:
   - component: {fileID: 598001009}
   - component: {fileID: 598001008}
   - component: {fileID: 598001007}
-  - component: {fileID: 598001006}
+  - component: {fileID: 598001010}
   m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -1409,26 +1345,6 @@ Transform:
   m_Father: {fileID: 1780489364}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &598001006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 598001004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e422ef9bc5d45e45b8f96d63e53462a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEnabled: 1
-  isBusy: 0
-  onInteract:
-    m_PersistentCalls:
-      m_Calls: []
-  onPerform:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &598001007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1492,6 +1408,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 598001004}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &598001010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598001004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  isEnabled: 1
+  outline: {fileID: 0}
 --- !u!1 &639005899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1685,14 +1624,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnabled: 1
-  isBusy: 0
   onInteract:
     m_PersistentCalls:
       m_Calls: []
-  onPerform:
+  onSelect:
     m_PersistentCalls:
       m_Calls: []
+  onDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  isEnabled: 1
   outline: {fileID: 649443332}
 --- !u!65 &649443334
 BoxCollider:
@@ -2161,14 +2102,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnabled: 1
-  isBusy: 0
   onInteract:
     m_PersistentCalls:
       m_Calls: []
-  onPerform:
+  onSelect:
     m_PersistentCalls:
       m_Calls: []
+  onDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  isEnabled: 1
   outline: {fileID: 1220404890}
 --- !u!65 &1220404892
 BoxCollider:
@@ -2576,14 +2519,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnabled: 1
-  isBusy: 0
   onInteract:
     m_PersistentCalls:
       m_Calls: []
-  onPerform:
+  onSelect:
     m_PersistentCalls:
       m_Calls: []
+  onDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  isEnabled: 1
   outline: {fileID: 1284289549}
 --- !u!65 &1284289551
 BoxCollider:
@@ -2687,7 +2632,7 @@ GameObject:
   - component: {fileID: 1288203508}
   - component: {fileID: 1288203507}
   - component: {fileID: 1288203506}
-  - component: {fileID: 1288203504}
+  - component: {fileID: 1288203509}
   m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -2710,26 +2655,6 @@ Transform:
   m_Father: {fileID: 64706102}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1288203504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288203502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e422ef9bc5d45e45b8f96d63e53462a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEnabled: 1
-  isBusy: 0
-  onInteract:
-    m_PersistentCalls:
-      m_Calls: []
-  onPerform:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &1288203506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2793,6 +2718,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288203502}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1288203509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288203502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  isEnabled: 1
+  outline: {fileID: 0}
 --- !u!1 &1315452426
 GameObject:
   m_ObjectHideFlags: 0
@@ -3043,7 +2991,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1489667620
 GameObject:
@@ -3284,14 +3232,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnabled: 1
-  isBusy: 0
   onInteract:
     m_PersistentCalls:
       m_Calls: []
-  onPerform:
+  onSelect:
     m_PersistentCalls:
       m_Calls: []
+  onDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  isEnabled: 1
   outline: {fileID: 1631064679}
 --- !u!65 &1631064681
 BoxCollider:
@@ -3461,14 +3411,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnabled: 1
-  isBusy: 0
   onInteract:
     m_PersistentCalls:
       m_Calls: []
-  onPerform:
+  onSelect:
     m_PersistentCalls:
       m_Calls: []
+  onDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  isEnabled: 1
   outline: {fileID: 1670671060}
 --- !u!65 &1670671062
 BoxCollider:
@@ -3608,26 +3560,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13cb6f5a6df126b4491bb7b95170f343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnabled: 1
-  isBusy: 0
   onInteract:
     m_PersistentCalls:
       m_Calls: []
-  onPerform:
+  onSelect:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1780489358}
-        m_TargetAssemblyTypeName: CollectableItem, Assembly-CSharp
-        m_MethodName: Collect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  onDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  isEnabled: 1
   outline: {fileID: 0}
 --- !u!114 &1780489360
 MonoBehaviour:
@@ -3807,7 +3749,7 @@ Transform:
   m_Children:
   - {fileID: 1489667621}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 30.916, y: -1.943, z: 0}
 --- !u!1 &1842202499
 GameObject:
@@ -3842,14 +3784,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEnabled: 1
-  isBusy: 0
   onInteract:
     m_PersistentCalls:
       m_Calls: []
-  onPerform:
+  onSelect:
     m_PersistentCalls:
       m_Calls: []
+  onDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  isEnabled: 1
   outline: {fileID: 1842202505}
 --- !u!65 &1842202501
 BoxCollider:
@@ -3985,7 +3929,7 @@ GameObject:
   - component: {fileID: 1914687266}
   - component: {fileID: 1914687265}
   - component: {fileID: 1914687264}
-  - component: {fileID: 1914687262}
+  - component: {fileID: 1914687267}
   m_Layer: 6
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -4008,26 +3952,6 @@ Transform:
   m_Father: {fileID: 64706102}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1914687262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1914687260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e422ef9bc5d45e45b8f96d63e53462a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEnabled: 1
-  isBusy: 0
-  onInteract:
-    m_PersistentCalls:
-      m_Calls: []
-  onPerform:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &1914687264
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4091,6 +4015,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914687260}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1914687267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914687260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  isEnabled: 1
+  outline: {fileID: 0}
 --- !u!1 &1918997303
 GameObject:
   m_ObjectHideFlags: 0
@@ -4761,7 +4708,7 @@ GameObject:
   - component: {fileID: 1981627279}
   - component: {fileID: 1981627278}
   - component: {fileID: 1981627277}
-  - component: {fileID: 1981627276}
+  - component: {fileID: 1981627280}
   m_Layer: 6
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -4784,26 +4731,6 @@ Transform:
   m_Father: {fileID: 1780489364}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1981627276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1981627274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e422ef9bc5d45e45b8f96d63e53462a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEnabled: 1
-  isBusy: 0
-  onInteract:
-    m_PersistentCalls:
-      m_Calls: []
-  onPerform:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &1981627277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4867,3 +4794,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981627274}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1981627280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981627274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  isEnabled: 1
+  outline: {fileID: 0}

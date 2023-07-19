@@ -13,7 +13,6 @@ public class LightSourceToggler : MonoBehaviour
     [ColorUsage(true, true)] 
     public Color emissionColor;
     public new Light light;
-    public List<LightmapToggler> lightmaps = new();
 
     private bool isEnabled;
     private MaterialPropertyBlock _mpb;
@@ -50,20 +49,12 @@ public class LightSourceToggler : MonoBehaviour
             {
                 _mpb.SetColor("_EmissionColor", Color.black);
             }
+
             emitterRenderer.SetPropertyBlock(_mpb);
         }
 
         if (light != null)
             light.enabled = isEnabled;
-
-        if (lightmaps.Count > 0)
-        {
-            lightmaps.ForEach((lm) =>
-            {
-                if (lm != null)
-                    lm.Toggle(isEnabled);
-            });
-        }
     }
 
 }
