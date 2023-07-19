@@ -1,29 +1,7 @@
 using System;
 
-public class InteractablePart : InteractableBase
+public class InteractablePart 
 {
 
-    public Action onSelect;
-    public Action onDeselect;
-
-    public override void Select()
-    {
-        onSelect?.Invoke();
-    }
-
-    public override void Deselect()
-    {
-        onDeselect?.Invoke();
-    }
-
-    public override void Interact()
-    {
-        onInteract?.Invoke();
-    }
-
-    public override void Perform()
-    {
-        onPerform?.Invoke();
-    }
 
 }

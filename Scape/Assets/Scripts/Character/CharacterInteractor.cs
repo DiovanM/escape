@@ -11,7 +11,7 @@ public class CharacterInteractor : MonoBehaviour
     [SerializeField] private LayerMask layer;
     [SerializeField] private float maxDistance;
 
-    private InteractableBase selectedInteractable;
+    private Interactable selectedInteractable;
 
     private void Start()
     {
@@ -25,12 +25,12 @@ public class CharacterInteractor : MonoBehaviour
 
         if(Physics.Raycast(ray, out var hitInfo, maxDistance, layer.value))
         {
-            var interactable = hitInfo.collider.GetComponent<InteractableBase>();
+            var interactable = hitInfo.collider.GetComponent<Interactable>();
             if (interactable == null)
             {
                 return;
             }
-            else if (interactable.isAvailable && interactable != selectedInteractable)
+            else if (interactable.Available && interactable != selectedInteractable)
             {
                 selectedInteractable?.Deselect();
                 selectedInteractable = interactable;
@@ -49,17 +49,10 @@ public class CharacterInteractor : MonoBehaviour
 
     private void Interact(CallbackContext context)
     {
-        if (selectedInteractable != null && selectedInteractable.isAvailable)
+        if (selectedInteractable != null && selectedInteractable.Available)
         {
-            selectedInteractable.onPerform.AddListener(OnInteractedPerform);
             selectedInteractable.Interact();
         }
-    }
-
-    private void OnInteractedPerform()
-    {
-        selectedInteractable.onPerform.RemoveListener(OnInteractedPerform);
-        onInteract?.Invoke(selectedInteractable);
     }
 
 }

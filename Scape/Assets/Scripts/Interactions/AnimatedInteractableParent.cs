@@ -1,10 +1,12 @@
-using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
-public class InteractableParent : Interactable
+public class AnimatedInteractableParent : AnimatedInteractable
 {
-    private List<Interactable> interactableParts = new ();
+
+    private List<Interactable> interactableParts = new();
 
     protected new void Awake()
     {
@@ -27,5 +29,4 @@ public class InteractableParent : Interactable
 
         interactableParts.ForEach((part) => part.SetEnabled(value));
     }
-
 }
