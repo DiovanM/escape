@@ -4,22 +4,19 @@ using UnityEngine;
 
 public class CollectableItem : MonoBehaviour
 {
-    public string itemKey;
-
-    private void Awake()
-    {
-        if (string.IsNullOrEmpty(itemKey))
-            itemKey = gameObject.name;
-    }
+    [SerializeField] private new Renderer renderer;
+    public ItemSO itemSO;
 
     public void Collect()
     {
-        gameObject.SetActive(false);
+        renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        Debug.Log("Collected " + itemSO.itemKey, gameObject);
     }
 
     public void Use()
     {
-        Debug.Log("Item Used " + itemKey);
+        renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+        Debug.Log("Item Used " + itemSO.itemKey);
     }
 
 }

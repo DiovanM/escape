@@ -52,6 +52,7 @@ public class CharacterInteractor : MonoBehaviour
         if (selectedInteractable != null && selectedInteractable.Available)
         {
             selectedInteractable.Interact();
+            onInteract?.Invoke(selectedInteractable);
         }
     }
 

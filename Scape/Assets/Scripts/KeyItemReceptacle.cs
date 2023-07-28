@@ -20,13 +20,13 @@ public class KeyItemReceptacle : MonoBehaviour
 
     public bool TryUseItem(CollectableItem item)
     {
-        if(item.itemKey == expectedItemKey)
+        if(item.itemSO.itemKey == expectedItemKey)
         {
             item.Use();
             onItemUsed?.Invoke(item);
             return true;
         }
-        Debug.Log($"Item key does not match: {item.itemKey} : {expectedItemKey}", gameObject);
+        Debug.Log($"Item key does not match: {item.itemSO.itemKey} : {expectedItemKey}", gameObject);
         return false;
     }
 

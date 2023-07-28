@@ -21,7 +21,7 @@ namespace UI
         public void Clear()
         {
             indicator.text = "";
-            icon = null;
+            icon.sprite = null;
             highlight.SetActive(false);
         }
 

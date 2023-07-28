@@ -23,14 +23,15 @@ namespace UI
             InventoryManager.onRemoveItem.Insert(RemoveItem, this, 0);
             InventoryManager.onSelectItem.Insert(SelectItem, this, 0);
 
-            _itemsViewsQueue = new Queue<ItemView>(_itemsViews);
-
-            _itemBar.SetActive(false);
             _itemsViews.ForEach(item =>
             {
                 item.Clear();
                 item.gameObject.SetActive(false);
             });
+
+            _itemsViewsQueue = new Queue<ItemView>(_itemsViews);
+
+            _itemBar.SetActive(false);
         }
 
         private void AddItem(CollectableItem item)
@@ -41,7 +42,7 @@ namespace UI
             var itemIndex = _collectedItems.Count + 1;
 
             //Get Item Data
-            //itemView.icon = data.icon;
+            itemView.icon.sprite = item.itemSO.icon;
             itemView.indicator.text = itemIndex.ToString();
             if (itemIndex == 1)
             {
