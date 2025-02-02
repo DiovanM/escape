@@ -9,6 +9,7 @@ public class CharacterMovement : MonoBehaviour
 {
 
     [SerializeField] private CharacterController characterController;
+    [SerializeField] private Animator characterAnimator;
     
     [SerializeField] private float walkingSpeed;
     [SerializeField] private float crouchSpeed;
@@ -43,6 +44,9 @@ public class CharacterMovement : MonoBehaviour
 
         moveVelocity.x = desiredVelocity.x;
         moveVelocity.z = desiredVelocity.z;
+        
+        characterAnimator.SetFloat("x", movementInput.x);
+        characterAnimator.SetFloat("y", movementInput.y);
 
         if (characterController.isGrounded)
         {
