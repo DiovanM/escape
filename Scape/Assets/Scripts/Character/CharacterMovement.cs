@@ -34,7 +34,7 @@ public class CharacterMovement : MonoBehaviour
         InputManager.character.Controls.Crouch.performed += OnCrouchPerformed;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         var movementInput = InputManager.character.Controls.Move.ReadValue<Vector2>();
 
