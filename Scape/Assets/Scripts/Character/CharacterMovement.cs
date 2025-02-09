@@ -4,6 +4,7 @@ using UnityEngine;
 using CallbackContext = UnityEngine.InputSystem.InputAction.CallbackContext;
 using Input;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class CharacterMovement : MonoBehaviour
     private bool jump;
     private bool crouching;
     private bool runningCrouch;
+    
+    public UnityEvent<bool> OnChangeCrouchState;
 
     private void Start()
     {
@@ -84,6 +87,8 @@ public class CharacterMovement : MonoBehaviour
 
         var runningHeight = true;
         var runningcenter = true;
+        
+        characterAnimator.SetBool("Crouching", !crouching);
 
         DOTween.To(() => characterController.height, x => characterController.height = x, targetHeight, crouchingTime).onComplete += () =>
         {
@@ -127,6 +132,7 @@ public class CharacterMovement : MonoBehaviour
         if(canCrouch)
         {
             ToggleCrouch();
+            OnChangeCrouchState?.Invoke(!crouching);
         }
     }
 
