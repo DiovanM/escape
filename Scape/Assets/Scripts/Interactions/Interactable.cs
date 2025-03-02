@@ -30,12 +30,17 @@ public class Interactable : InteractableBase
     public override void Select()
     {
         SetOutline(true);
+        
+        if(name != null)
+            DialogManager.ShowTip(name.GetText());
+        
         onSelect?.Invoke();
     }
 
     public override void Deselect()
     {
         SetOutline(false);
+        DialogManager.HideTip();
         onDeselect?.Invoke();
     }
 

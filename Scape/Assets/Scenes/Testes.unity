@@ -169,6 +169,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13cb6f5a6df126b4491bb7b95170f343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: name
+      Entry: 7
+      Data: 0|Localization.LocalizedString, Assembly-CSharp
+    - Name: tag
+      Entry: 1
+      Data: Cowboy
+    - Name: 
+      Entry: 8
+      Data: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -392,6 +410,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: name
+      Entry: 6
+      Data: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -570,6 +600,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: name
+      Entry: 6
+      Data: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -893,6 +935,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: name
+      Entry: 6
+      Data: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -1025,6 +1079,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: name
+      Entry: 6
+      Data: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -1349,6 +1415,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5902870b1e4c34c4093b390793f9a35e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: name
+      Entry: 7
+      Data: 0|Localization.LocalizedString, Assembly-CSharp
+    - Name: tag
+      Entry: 1
+      Data: Lever
+    - Name: 
+      Entry: 8
+      Data: 
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -1494,6 +1578,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: name
+      Entry: 6
+      Data: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -1704,6 +1800,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: name
+      Entry: 6
+      Data: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -2289,7 +2397,7 @@ MonoBehaviour:
   - SK_Chr_Developer_Male_01_Head
   - SK_Chr_Developer_Male_01_Head_Shadow
   showBones: 000000000e0000000f00000010000000110000001200000013000000140000002300000024000000250000002600000035000000360000003d0000003e0000003f0000004000000043000000440000004500000046000000
-  foldoutBones: 440000003f000000010000001b0000003e00000046000000250000000e000000290000001000000013000000090000003600000027000000400000001800000032000000210000002f00000023000000170000001400000020000000390000000f00000011000000240000001d0000000500000037000000020000000800000000000000070000001a000000470000002e0000003b000000430000001200000035000000160000002d000000260000003d0000002a0000003100000028000000330000002c0000001f0000000b0000001c0000000300000041000000150000000d00000045000000
+  foldoutBones: 470000004600000045000000440000004300000041000000400000003f0000003e0000003d0000003b000000390000003700000036000000350000003300000032000000310000002f0000002e0000002d0000002c0000002a0000002900000028000000270000002600000025000000240000002300000021000000200000001f0000001d0000001c0000001b0000001a0000001800000017000000160000001500000014000000130000001200000011000000100000000f0000000e0000000d0000000b0000000900000008000000070000000500000003000000020000000100000000000000
   mirrorBones: ffffffffffffffffffffffff05000000060000000300000004000000ffffffffffffffff0b0000000c000000090000000a000000ffffffffffffffffffffffffffffffff230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f00000030000000310000003200000033000000340000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000ffffffffffffffffffffffffffffffff3b000000ffffffff39000000ffffffff4300000044000000450000004600000047000000480000003d0000003e0000003f000000400000004100000042000000ffffffffffffffffffffffff
   mirrorBlendShape: []
   animatorIkData:
@@ -2437,6 +2545,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: name
+      Entry: 6
+      Data: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -3057,18 +3177,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2268020381107540316, guid: 7059f0f70503099469985f6873cafacb,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.53825283
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268020381107540316, guid: 7059f0f70503099469985f6873cafacb,
+        type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.45857075
+      value: 0.4585671
       objectReference: {fileID: 0}
     - target: {fileID: 2268020381107540316, guid: 7059f0f70503099469985f6873cafacb,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.5382498
+      value: -0.538253
       objectReference: {fileID: 0}
     - target: {fileID: 2268020381107540316, guid: 7059f0f70503099469985f6873cafacb,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.4585706
+      value: 0.4585672
       objectReference: {fileID: 0}
     - target: {fileID: 2304852439706388012, guid: 7059f0f70503099469985f6873cafacb,
         type: 3}
@@ -3108,12 +3233,12 @@ PrefabInstance:
     - target: {fileID: 2492287787575177818, guid: 7059f0f70503099469985f6873cafacb,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.004519756
+      value: -0.0045197564
       objectReference: {fileID: 0}
     - target: {fileID: 2492287787575177818, guid: 7059f0f70503099469985f6873cafacb,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.15906872
+      value: -0.15906873
       objectReference: {fileID: 0}
     - target: {fileID: 2730543988290235361, guid: 7059f0f70503099469985f6873cafacb,
         type: 3}
@@ -3738,7 +3863,7 @@ PrefabInstance:
     - target: {fileID: 6715237580728793201, guid: 7059f0f70503099469985f6873cafacb,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.011328259
+      value: 0.0113282595
       objectReference: {fileID: 0}
     - target: {fileID: 6715237580728793201, guid: 7059f0f70503099469985f6873cafacb,
         type: 3}
@@ -3748,7 +3873,7 @@ PrefabInstance:
     - target: {fileID: 6715237580728793201, guid: 7059f0f70503099469985f6873cafacb,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.03380661
+      value: 0.033806615
       objectReference: {fileID: 0}
     - target: {fileID: 7137787084976343586, guid: 7059f0f70503099469985f6873cafacb,
         type: 3}
@@ -4230,6 +4355,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: name
+      Entry: 6
+      Data: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -4463,6 +4600,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: name
+      Entry: 6
+      Data: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -4935,6 +5084,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: name
+      Entry: 6
+      Data: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -5125,6 +5286,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: name
+      Entry: 6
+      Data: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -5286,6 +5459,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13cb6f5a6df126b4491bb7b95170f343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: name
+      Entry: 7
+      Data: 0|Localization.LocalizedString, Assembly-CSharp
+    - Name: tag
+      Entry: 1
+      Data: Outro Cowboy
+    - Name: 
+      Entry: 8
+      Data: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -5521,6 +5712,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: name
+      Entry: 6
+      Data: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -5786,6 +5989,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: name
+      Entry: 6
+      Data: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -6101,6 +6316,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 652084493018439167, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 12.963906
+      objectReference: {fileID: 0}
+    - target: {fileID: 652084493018439167, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 14.930844
+      objectReference: {fileID: 0}
+    - target: {fileID: 652084493018439167, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_ActiveFontFeatures.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 712556033441167662, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -6134,6 +6364,21 @@ PrefabInstance:
     - target: {fileID: 712556033441167662, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542305025565446478, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 12.963906
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542305025565446478, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 14.930844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542305025565446478, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_ActiveFontFeatures.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2581595464571165201, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
@@ -6176,6 +6421,36 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3839385204619352606, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 12.963906
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839385204619352606, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 14.930844
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839385204619352606, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_ActiveFontFeatures.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564245070726083185, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 12.963906
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564245070726083185, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 14.930844
+      objectReference: {fileID: 0}
+    - target: {fileID: 4564245070726083185, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_ActiveFontFeatures.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4591523441596782240, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -6261,6 +6536,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6008169726262945274, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 12.963906
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008169726262945274, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 14.930844
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008169726262945274, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_ActiveFontFeatures.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6028003413619328221, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -6294,6 +6584,36 @@ PrefabInstance:
     - target: {fileID: 6028003413619328221, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257313349334270554, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 12.963906
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257313349334270554, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 14.930844
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257313349334270554, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_ActiveFontFeatures.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265699492191692652, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 12.963906
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265699492191692652, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 14.930844
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265699492191692652, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_ActiveFontFeatures.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6935764598960729139, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
@@ -6376,6 +6696,21 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 125
       objectReference: {fileID: 0}
+    - target: {fileID: 7283218283308355458, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 12.963906
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283218283308355458, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 14.930844
+      objectReference: {fileID: 0}
+    - target: {fileID: 7283218283308355458, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_ActiveFontFeatures.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7337977682640924325, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -6415,6 +6750,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764776749696971712, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7764776749696971716, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
         type: 3}
@@ -6519,6 +6859,21 @@ PrefabInstance:
     - target: {fileID: 7764776749696971716, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474269384779753330, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 12.963906
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474269384779753330, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 14.930844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474269384779753330, guid: ce0f14ed43ee2074fac8ec446bfbbd22,
+        type: 3}
+      propertyPath: m_ActiveFontFeatures.Array.size
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6647,6 +7002,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fad74ab064440440b061c8e553e7390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: name
+      Entry: 6
+      Data: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []

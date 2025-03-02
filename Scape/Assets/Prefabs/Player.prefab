@@ -477,8 +477,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterController: {fileID: 7644469086057654276}
   characterAnimator: {fileID: 3886236345774837848}
-  walkingSpeed: 4
-  crouchSpeed: 2
+  walkingSpeed: 2
+  crouchSpeed: 1
   jumpForce: 7
   gravityScale: 2
   playerHeight: 1.8
@@ -817,6 +817,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -288904990496555883, guid: f9af9cb86fae78f468fa7e2134f7c35b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.53824884
+      objectReference: {fileID: 0}
+    - target: {fileID: -288904990496555883, guid: f9af9cb86fae78f468fa7e2134f7c35b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.45857176
+      objectReference: {fileID: 0}
+    - target: {fileID: -288904990496555883, guid: f9af9cb86fae78f468fa7e2134f7c35b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.538249
+      objectReference: {fileID: 0}
+    - target: {fileID: -288904990496555883, guid: f9af9cb86fae78f468fa7e2134f7c35b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.45857188
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f9af9cb86fae78f468fa7e2134f7c35b,
         type: 3}
       propertyPath: m_Name
@@ -854,7 +874,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5266836796967678154}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3728003990371410725, guid: f9af9cb86fae78f468fa7e2134f7c35b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2844812407189136695}
   m_SourcePrefab: {fileID: 100100000, guid: f9af9cb86fae78f468fa7e2134f7c35b, type: 3}
 --- !u!4 &8217791430017054 stripped
 Transform:
@@ -1114,6 +1138,32 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7242978921386323401}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6284981176336387820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3728003990371410725, guid: f9af9cb86fae78f468fa7e2134f7c35b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7242978921386323401}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1818360609 &2844812407189136695
+RotationConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6284981176336387820}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_RotationAtRest: {x: 80.85973, y: -90, z: 0}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_AffectRotationX: 0
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_Active: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 7644469086095600084}
+    weight: 1
 --- !u!4 &6405536409435293184 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4350815447590333385, guid: f9af9cb86fae78f468fa7e2134f7c35b,

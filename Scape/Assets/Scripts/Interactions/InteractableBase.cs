@@ -1,8 +1,15 @@
+using System;
+using Localization;
+using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using UnityEngine;
 using UnityEngine.Events;
 
-public abstract class InteractableBase : MonoBehaviour
+public abstract class InteractableBase : SerializedMonoBehaviour
 {
+
+    [NonSerialized, OdinSerialize]
+    public LocalizedString name;
 
     public abstract bool Available 
     {
